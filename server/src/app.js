@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 dotenv.config();
 app.use(cookieParser());
 app.set("trust proxy", 1);
-app.options("*", cors());
+
 app.use(
   cors({
     origin: process.env.CLIENT_URL,
