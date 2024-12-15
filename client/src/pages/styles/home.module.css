@@ -1,0 +1,70 @@
+.container {
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  align-items: center;
+  background: #ed5353;
+  margin-bottom: 1rem;
+  z-index: 1000;
+}
+.spacer {
+  height: 20vh;
+}
+.logo {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logout {
+  cursor: pointer;
+}
+.logout,
+.text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.pagination {
+  padding: 2rem 0;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+.btn {
+  padding: 0.5rem 2rem;
+  background: #ed5353;
+  color: #ffffff;
+  border-radius: 1rem;
+  border: none;
+}
+.btn:disabled {
+  background: #f97575;
+  cursor: not-allowed;
+}
+@media (max-width: 768px) {
+  .text {
+    display: none;
+  }
+}
