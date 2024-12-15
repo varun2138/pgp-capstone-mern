@@ -37,6 +37,7 @@ const createJob = asyncHandler(async (req, res) => {
   res.status(201).json({ job });
 });
 const getJobs = asyncHandler(async (req, res) => {
+  console.log("authenticated user", req.user);
   const { limit, offset, salary, name, type, location, work, skills } =
     req.query;
   const query = {

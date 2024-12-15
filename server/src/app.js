@@ -17,6 +17,10 @@ app.use(
 );
 app.use(bodyParser.json());
 
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+});
+
 // routes declaration
 import userRouter from "./routes/user.route.js";
 import jobRouter from "./routes/job.route.js";

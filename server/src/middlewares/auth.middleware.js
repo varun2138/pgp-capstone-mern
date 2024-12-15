@@ -6,7 +6,7 @@ const protectAuth = async (req, res, next) => {
   try {
     console.log(req.headers);
     const token = req.cookies?.accessToken;
-    console.log(token);
+    console.log("auth token", token);
 
     if (!token) {
       return res.status(401).json({ message: "unauthorized request" });
@@ -15,7 +15,7 @@ const protectAuth = async (req, res, next) => {
     console.log(decodedToken);
 
     req.user = decodedToken;
-    console.log(req.user);
+    console.log("user in middleware", req.user);
     next();
   } catch (error) {
     return res.status(401).json({ message: "invalid token" });
