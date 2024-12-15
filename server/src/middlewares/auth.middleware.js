@@ -5,7 +5,7 @@ dotenv.config({});
 const protectAuth = async (req, res, next) => {
   try {
     console.log(req.headers);
-    const token = req.cookies.accessToken;
+    const token = req.cookies?.accessToken;
     console.log(token);
 
     if (!token) {
