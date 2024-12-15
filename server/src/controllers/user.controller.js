@@ -56,7 +56,7 @@ const logout = asyncHandler(async (req, res) => {
   res.clearCookie("accessToken", {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "none",
+    sameSite: "None",
   });
   res.status(200).json({ message: "logged out successfully" });
 });
