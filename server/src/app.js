@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import path from "path";
 
 const app = express();
 import dotenv from "dotenv";
@@ -23,5 +24,9 @@ import jobRouter from "./routes/job.route.js";
 
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/jobs", jobRouter);
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+});
 
 export default app;
