@@ -31,8 +31,8 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/jobs", jobRouter);
 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
+  res.sendFile(path.resolve(__dirname, "../../client/dist", "index.html"));
 });
-console.log("path", path.resolve(__dirname));
+console.log("path", path.resolve(__dirname, "../../client/dist", "index.html"));
 
 export default app;
